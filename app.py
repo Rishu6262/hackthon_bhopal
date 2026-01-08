@@ -15,6 +15,33 @@ st.set_page_config(
 df = pd.read_csv("ui_mapping_data.csv")
 
 model = joblib.load("agriculture_price_model_compressed.pkl")
+df = pd.read_csv("ui_mapping_data.csv")
+
+# IMPORTANT: NaN remove + convert to string
+df = df.dropna(subset=['STATE', 'District Name', 'Market Name',
+                        'Commodity', 'Variety', 'Grade'])
+
+df['STATE'] = df['STATE'].astype(str)
+df['District Name'] = df['District Name'].astype(str)
+df['Market Name'] = df['Market Name'].astype(str)
+df['Commodity'] = df['Commodity'].astype(str)
+df['Variety'] = df['Variety'].astype(str)
+df['Grade'] = df['Grade'].astype(str)
+state_list = sorted(df['STATE'].unique().tolist())
+
+district_map = (
+    df.groupby('STATE')['District Name']
+    .apply(lambda x: sorted(x.unique().tolist()))
+    .to_dict()
+)
+
+market_map = (
+    df.groupby(['STATE', 'District Name'])['Market Name']
+    .apply(lambda x: sorted(x.unique().tolist()))
+    .to_dict()
+)
+
+commodity_list = sorted(df['Commodity'].unique().tolist())
 
 # ================= TITLE =================
 st.markdown(
@@ -111,5 +138,6 @@ st.markdown(
     "<p style='text-align:center;'>Built with ❤️ using Streamlit & Machine Learning</p>",
     unsafe_allow_html=True
 )
+
 
 
