@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # ================= LOAD DATA & MODEL =================
-df = pd.read_csv("Agriculture_price_dataset.csv")
+# df = pd.read_csv("Agriculture_price_dataset.csv")
 df = pd.read_csv("ui_mapping_data.csv")
 
 model = joblib.load("agriculture_price_model_compressed.pkl")
@@ -111,4 +111,5 @@ st.markdown(
     "<p style='text-align:center;'>Built with ❤️ using Streamlit & Machine Learning</p>",
     unsafe_allow_html=True
 )
+
 
