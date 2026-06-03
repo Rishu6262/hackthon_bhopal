@@ -1,167 +1,260 @@
-# 🌾 Agriculture Price Prediction & Analysis Project
+# 🌾 Agriculture Price Prediction System
 
-## 📌 Project Overview
+## 🔗 Live Demo
 
-The Agriculture Price Prediction & Analysis Project is a data-driven machine learning application designed to analyze agricultural market prices and predict future crop prices based on historical market data. The project helps farmers, traders, researchers, and policymakers make informed decisions by understanding commodity price trends across different states, districts, and markets in India.
-
-The dataset contains agricultural commodity prices collected from various markets, including minimum price, maximum price, and modal price information for different crops.
+**Try the Application Here:**
+https://hackthonbhopal-z7pghruiu4puhs63q6fstd.streamlit.app/
 
 ---
 
-## 📊 Dataset Information
+# 📌 Project Overview
 
-**Dataset Name:** Agriculture_price_dataset.csv
+The Agriculture Price Prediction System is a Machine Learning-powered web application developed to predict the **Modal Price** of agricultural commodities using historical market data collected from agricultural markets across India.
 
-### Features
+The system enables users to select a state, district, market, commodity, variety, and grade while providing minimum and maximum market prices. Based on these inputs, a trained machine learning model predicts the expected modal price of the selected crop.
 
-| Column Name   | Description                       |
-| ------------- | --------------------------------- |
-| STATE         | State where the market is located |
-| District Name | District of the market            |
-| Market Name   | Name of the agricultural market   |
-| Commodity     | Crop/commodity name               |
-| Variety       | Variety of the commodity          |
-| Grade         | Quality grade of the commodity    |
-| Min_Price     | Minimum price recorded            |
-| Max_Price     | Maximum price recorded            |
-| Modal_Price   | Most common selling price         |
-| Price Date    | Date of price record              |
+This project helps farmers, traders, agricultural researchers, and policymakers make better pricing decisions through data-driven insights and predictive analytics.
+
+---
+
+# 🎯 Problem Statement
+
+Agricultural commodity prices change frequently due to factors such as:
+
+* Market demand and supply
+* Seasonal variations
+* Regional market conditions
+* Crop quality and variety
+* Economic fluctuations
+
+Because of these uncertainties, farmers often struggle to estimate the right selling price for their crops.
+
+This project addresses that challenge by leveraging machine learning algorithms to predict crop prices based on historical agricultural market data.
+
+---
+
+# ✨ Key Features
+
+✅ Predict Agricultural Commodity Prices
+
+✅ Interactive Streamlit Web Application
+
+✅ State-wise Market Selection
+
+✅ District and Market Filtering
+
+✅ Commodity-wise Price Prediction
+
+✅ Variety and Grade Selection
+
+✅ Real-Time Prediction Results
+
+✅ User-Friendly Interface
+
+✅ Input Validation System
+
+✅ Fast and Lightweight Deployment
+
+---
+
+# 📊 Dataset Information
+
+The project utilizes a large-scale Agricultural Market Dataset containing historical crop prices from multiple markets across India.
+
+### Dataset Features
+
+| Feature       | Description               |
+| ------------- | ------------------------- |
+| STATE         | State Name                |
+| District Name | District Name             |
+| Market Name   | Market Name               |
+| Commodity     | Crop Name                 |
+| Variety       | Crop Variety              |
+| Grade         | Crop Quality Grade        |
+| Min Price     | Minimum Market Price      |
+| Max Price     | Maximum Market Price      |
+| Modal Price   | Most Common Selling Price |
+| Price Date    | Date of Record            |
 
 ### Dataset Statistics
 
-* Total Records: **737,392**
-* Total Features: **10**
-* Data Type: Mixed (Categorical + Numerical)
-* Missing Values: Requires preprocessing before model training
+* Total Records: **737,000+**
+* Multiple States
+* Multiple Markets
+* Multiple Commodities
+* Historical Agricultural Price Data
 
 ---
 
-## 🎯 Project Objectives
+# 🛠 Technologies Used
 
-* Analyze agricultural commodity price trends.
-* Perform Exploratory Data Analysis (EDA).
-* Identify price variations across states and markets.
-* Build machine learning models for price prediction.
-* Visualize market-wise and commodity-wise insights.
-* Assist farmers in making better selling decisions.
-
----
-
-## 🛠️ Technologies Used
+## Programming Language
 
 * Python
+
+## Libraries
+
 * Pandas
 * NumPy
-* Matplotlib
-* Seaborn
 * Scikit-Learn
+* Joblib
 * Streamlit
-* Joblib/Pickle
+
+## Machine Learning
+
+* Regression-Based Prediction Model
+
+## Deployment
+
+* GitHub
+* Streamlit Cloud
 
 ---
 
-## 📈 Exploratory Data Analysis
+# 📈 Exploratory Data Analysis (EDA)
 
-The project performs:
+Before model training, extensive data analysis was performed to understand crop price behavior.
 
-* Commodity-wise price distribution analysis
-* State-wise market comparison
-* Trend analysis over time
-* Correlation analysis
-* Outlier detection
-* Price fluctuation visualization
+### Analysis Included
 
-### Visualizations
+* Commodity-wise Price Distribution
+* State-wise Price Comparison
+* Market Trend Analysis
+* Price Variation Analysis
+* Outlier Detection
+* Data Cleaning and Transformation
+
+### Visualizations Used
 
 * Bar Charts
 * Histograms
 * Line Charts
 * Box Plots
-* Heatmaps
-* Commodity Comparison Graphs
+* Correlation Analysis
 
 ---
 
-## 🤖 Machine Learning Models
+# ⚙️ Machine Learning Workflow
 
-The following models can be used and compared:
+## 1. Data Collection
 
-### Regression Models
+Collected agricultural market price records from multiple Indian markets.
 
-* Linear Regression
-* Decision Tree Regressor
-* Random Forest Regressor
-* XGBoost Regressor
-* Gradient Boosting Regressor
+## 2. Data Cleaning
 
-### Evaluation Metrics
+* Missing Value Handling
+* Duplicate Removal
+* Data Formatting
 
-* R² Score
-* Mean Absolute Error (MAE)
-* Mean Squared Error (MSE)
-* Root Mean Squared Error (RMSE)
+## 3. Feature Engineering
 
----
+Converted categorical features into machine-readable numerical values.
 
-## ⚙️ Project Workflow
+Encoded Features:
 
-1. Data Collection
-2. Data Cleaning
-3. Feature Engineering
-4. Encoding Categorical Features
-5. Train-Test Split
-6. Model Training
-7. Model Evaluation
-8. Prediction Generation
-9. Streamlit Deployment
+* State
+* District
+* Market
+* Commodity
+* Variety
+* Grade
 
----
+## 4. Model Training
 
-## 🚀 Installation
+The machine learning model was trained using historical agricultural pricing data.
 
-### Clone Repository
+## 5. Model Evaluation
 
-```bash
-git clone https://github.com/yourusername/agriculture-price-prediction.git
-cd agriculture-price-prediction
-```
+Model performance was validated on unseen data before deployment.
 
-### Install Dependencies
+## 6. Deployment
 
-```bash
-pip install -r requirements.txt
-```
-
-### Run Application
-
-```bash
-streamlit run app.py
-```
+The trained model was deployed using Streamlit Cloud for public access.
 
 ---
 
-## 💻 Application Features
+# 🚀 Application Workflow
 
-* Select State
-* Select District
-* Select Market
-* Select Commodity
-* Predict Market Price
-* View Historical Trends
-* Interactive Dashboard
-* Real-Time Insights
+### Step 1
+
+Select State
+
+### Step 2
+
+Select District
+
+### Step 3
+
+Select Market
+
+### Step 4
+
+Select Commodity
+
+### Step 5
+
+Select Variety
+
+### Step 6
+
+Select Grade
+
+### Step 7
+
+Enter:
+
+* Year
+* Month
+* Day
+* Minimum Price
+* Maximum Price
+
+### Step 8
+
+Click **Predict Price**
+
+### Step 9
+
+View Predicted Modal Price
 
 ---
 
-## 📂 Project Structure
+# 📥 Model Input Features
+
+| Input Feature |
+| ------------- |
+| State         |
+| District      |
+| Market        |
+| Commodity     |
+| Variety       |
+| Grade         |
+| Year          |
+| Month         |
+| Day           |
+| Minimum Price |
+| Maximum Price |
+
+---
+
+# 📤 Model Output
+
+The model predicts:
+
+### 💰 Modal Price (₹)
+
+The modal price represents the most commonly occurring selling price of a commodity in a market.
+
+---
+
+# 📁 Project Structure
 
 ```text
 Agriculture-Price-Prediction/
 │
 ├── app.py
 ├── Agriculture_price_dataset.csv
-├── model.pkl
-├── scaler.pkl
+├── agriculture_price_model_compressed.pkl
 ├── requirements.txt
 ├── README.md
 │
@@ -170,39 +263,101 @@ Agriculture-Price-Prediction/
 │   └── Model_Training.ipynb
 │
 └── assets/
-    └── images
+    └── screenshots/
 ```
 
 ---
 
-## 📊 Expected Outcomes
+# 🌟 Application Features
 
-* Accurate agricultural price prediction.
-* Better understanding of crop market trends.
-* Improved decision-making for farmers and traders.
-* Market intelligence through data analytics.
+### Dynamic Dropdown Selection
+
+The application automatically updates:
+
+* Districts based on selected State
+* Markets based on selected District
+* Varieties based on selected Commodity
+
+### Prediction Validation
+
+The system prevents invalid inputs such as:
+
+```python
+if min_price > max_price:
+    st.error("Minimum Price cannot be greater than Maximum Price")
+```
+
+### Real-Time Prediction
+
+Users receive instant crop price predictions without reloading the application.
 
 ---
 
-## 🔮 Future Enhancements
+# 🔮 Future Enhancements
 
-* Live Market Price Integration
-* Weather Data Integration
-* Crop Yield Prediction
-* Multi-Language Support
-* Mobile Application
+### Planned Improvements
+
+* Live Market Data Integration
+* Weather-Based Price Prediction
+* Crop Recommendation System
+* Price Trend Forecasting
 * Deep Learning Models
-* Price Forecasting for Upcoming Weeks/Months
+* Mobile Application
+* Multi-Language Support
+* Farmer Advisory Dashboard
+* Government API Integration
 
 ---
 
-## 👨‍💻 Author
+# 📸 Screenshots
 
-**Rishu Gurjar**
+## Home Page
+
+(Add Application Screenshot Here)
+
+## Prediction Page
+
+(Add Prediction Screenshot Here)
+
+## Result Page
+
+(Add Prediction Result Screenshot Here)
+
+---
+
+# 🎯 Project Impact
+
+This system can help:
+
+### Farmers
+
+* Better crop pricing decisions
+* Improved profit planning
+
+### Traders
+
+* Market trend analysis
+* Purchase planning
+
+### Researchers
+
+* Agricultural data analysis
+* Market behavior studies
+
+### Policymakers
+
+* Agricultural market monitoring
+* Price trend evaluation
+
+---
+
+# 👨‍💻 Author
+
+## Rishu Gurjar
 
 Aspiring Data Scientist | Machine Learning Enthusiast | Python Developer
 
-### Skills
+### Technical Skills
 
 * Python
 * SQL
@@ -211,11 +366,26 @@ Aspiring Data Scientist | Machine Learning Enthusiast | Python Developer
 * Data Analysis
 * Streamlit
 * Power BI
+* Git & GitHub
+
+### Connect With Me
+
+LinkedIn: https://www.linkedin.com/in/rishu-gurjar-58072a333
+
+GitHub: Add Your GitHub Profile Link
 
 ---
 
-## 📜 License
+# 📜 License
 
-This project is developed for educational and research purposes. Feel free to use and modify it with proper attribution.
+This project is developed for educational, research, and learning purposes.
 
-⭐ If you found this project useful, consider giving it a star on GitHub.
+You are free to use, modify, and improve the project with proper attribution.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a **Star ⭐ on GitHub**.
+
+Your support motivates future development and helps others discover the project.
