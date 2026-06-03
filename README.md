@@ -355,7 +355,7 @@ This system can help:
 
 ## Rishu Gurjar
 
-Aspiring Data Scientist | Machine Learning Enthusiast | Python Developer
+Aspiring Data Science | Machine Learning & Deep Learning Enthusiast | Python Developer
 
 ### Technical Skills
 
@@ -367,12 +367,14 @@ Aspiring Data Scientist | Machine Learning Enthusiast | Python Developer
 * Streamlit
 * Power BI
 * Git & GitHub
+* postgresql
+  
 
 ### Connect With Me
 
 LinkedIn: https://www.linkedin.com/in/rishu-gurjar-58072a333
 
-GitHub: Add Your GitHub Profile Link
+GitHub: 
 
 ---
 
