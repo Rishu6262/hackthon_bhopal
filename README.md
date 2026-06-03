@@ -374,7 +374,7 @@ Aspiring Data Science | Machine Learning & Deep Learning Enthusiast | Python Dev
 
 LinkedIn: https://www.linkedin.com/in/rishu-gurjar-58072a333
 
-GitHub: 
+GitHub:   https://github.com/Rishu6262
 
 ---
 
