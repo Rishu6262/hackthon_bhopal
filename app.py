@@ -139,7 +139,7 @@
 #     unsafe_allow_html=True
 # )
 
-from textwrap import dedent
+# from textwrap import dedent
 
 code = dedent(r'''
 # NOTE:
@@ -303,9 +303,9 @@ st.caption("Built with ❤️ using Python • Streamlit • Machine Learning")
 ''')
 
 path="/mnt/data/app.py"
-with open(path,"w",encoding="utf-8") as f:
-    f.write(code)
+# with open(path,"w",encoding="utf-8") as f:
+#     f.write(code)
 
-print(path)
+# print(path)
 
 
