@@ -293,7 +293,6 @@ if st.button("🔮 Predict Price", use_container_width=True):
 
 st.divider()
 st.caption("Built with ❤️ using Python • Streamlit • Machine Learning")
-''')
 
 
 
