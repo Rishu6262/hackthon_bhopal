@@ -138,7 +138,16 @@
 #     "<p style='text-align:center;'>Built with ❤️ using Streamlit & Machine Learning</p>",
 #     unsafe_allow_html=True
 # )
+import sys
+import subprocess
 
+st.write(sys.version)
+
+try:
+    import joblib
+    st.success(f"Joblib Version: {joblib.__version__}")
+except Exception as e:
+    st.error(e)
 
 import streamlit as st
 import pandas as pd
